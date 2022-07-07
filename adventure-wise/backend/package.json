@@ -1,0 +1,46 @@
+{
+   "name": "adventure-wise-backend",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "node server.js",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "nodemon server.js"
+   },
+   "keywords": [],
+   "contributors": [
+      {
+         "name": "Anthony Clay",
+         "email": "b@rubble.com",
+         "url": "https://github.com/iicba"
+      },
+      {
+         "name": "Magdiel Rosario Orta",
+         "email": "magdielrosario@gmail.com",
+         "url": "https://github.com/magdielrosario97"
+      },
+      {
+         "name": "Michael Howard",
+         "email": "b@rubble.com",
+         "url": "https://github.com/howardmg"
+      },
+      {
+         "name": "Siddhant Bose",
+         "email": "b@rubble.com",
+         "url": "https://github.com/pyrotechnicsid"
+      },
+      {
+         "name": "Jin Yanchao",
+         "email": "b@rubble.com",
+         "url": "https://github.com/yanchaoj"
+      }
+   ],
+   "license": "ISC",
+   "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.1",
+      "express": "^4.18.1",
+      "pg": "^8.7.3"
+   }
+}
