@@ -1,11 +1,13 @@
-import header from "./header";
+import HeaderApp from "./header/HeaderApp";
+import React from "react";
 
 function App() {
    return (
           <div className="App">
-              <header />
-   b      </div>
+              <HeaderApp />
+          </div>
    );
 }
 
 export default App;
+     
