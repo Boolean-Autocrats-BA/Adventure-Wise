@@ -7,5 +7,5 @@ Team Boolean Autocrats ft.
 Michael Howard (Mr. Square Jaw AKA BA Dad)
 Magdiel Rosario Orta
 Siddhant Bose
-Jin Yanchao
+Yanchao Jin
 Anthony Clay

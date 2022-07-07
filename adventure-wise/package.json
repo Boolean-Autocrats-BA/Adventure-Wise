@@ -1,65 +1,65 @@
 {
-  "name": "adventure-wise",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "contributors": [
-    {
-       "name": "Anthony Clay",
-       "email": "b@rubble.com",
-       "url": "https://github.com/iicba"
-    },
-    {
-       "name": "Magdiel Rosario Orta",
-       "email": "magdielrosario@gmail.com",
-       "url": "https://github.com/magdielrosario97"
-    },
-    {
-       "name": "Michael Howard",
-       "email": "b@rubble.com",
-       "url": "https://github.com/howardmg"
-    },
-    {
-       "name": "Siddhant Bose",
-       "email": "b@rubble.com",
-       "url": "https://github.com/pyrotechnicsid"
-    },
-    {
-       "name": "Jin Yanchao",
-       "email": "b@rubble.com",
-       "url": "https://github.com/yanchaoj"
-    }
- ]
+   "name": "adventure-wise",
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
+      "@testing-library/jest-dom": "^5.16.4",
+      "@testing-library/react": "^13.3.0",
+      "@testing-library/user-event": "^13.5.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-scripts": "5.0.1",
+      "web-vitals": "^2.1.4"
+   },
+   "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+   },
+   "eslintConfig": {
+      "extends": [
+         "react-app",
+         "react-app/jest"
+      ]
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "contributors": [
+      {
+         "name": "Anthony Clay",
+         "email": "b@rubble.com",
+         "url": "https://github.com/iicba"
+      },
+      {
+         "name": "Magdiel Rosario Orta",
+         "email": "magdielrosario@gmail.com",
+         "url": "https://github.com/magdielrosario97"
+      },
+      {
+         "name": "Michael Howard",
+         "email": "b@rubble.com",
+         "url": "https://github.com/howardmg"
+      },
+      {
+         "name": "Siddhant Bose",
+         "email": "b@rubble.com",
+         "url": "https://github.com/pyrotechnicsid"
+      },
+      {
+         "name": "Yanchao Jin",
+         "email": "b@rubble.com",
+         "url": "https://github.com/yanchaoj"
+      }
+   ]
 }
