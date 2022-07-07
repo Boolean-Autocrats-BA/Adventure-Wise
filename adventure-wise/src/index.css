@@ -1,1 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.test {
+    font-family:  'Major Mono Display', monospace;
+    font-size: 64px;
+}
