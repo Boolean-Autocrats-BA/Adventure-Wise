@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap%22");
 
-.container {
+.myTrip-container {
     border: 1px dashed black;
     background-color: aqua;
     padding: 2px;
@@ -8,14 +8,14 @@
     height: 75vh;
 }
 
-.container_header {
+.myTrip_header {
     border: 1px solid blue;
     padding: 3px;
     margin: 2px;
     text-align: center;
 }
 
-.overview {
+.myTrip-overview {
     border: 1px solid red;
     padding: 2px;
     margin: 4px 2px 2px 2px;

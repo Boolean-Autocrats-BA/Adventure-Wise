@@ -4,9 +4,9 @@ import "./Trips.css";
 
 const Trips = () => {
   return (
-    <div className="container">
-      <div className="container_header">Planned Trips/Itinerary</div>
-      <div className="overview">
+    <div className="myTrip-container">
+      <div className="myTrip-header">Planned Trips/Itinerary</div>
+      <div className="myTrip-overview">
         <TripList />
         <TripDetails />
       </div>
