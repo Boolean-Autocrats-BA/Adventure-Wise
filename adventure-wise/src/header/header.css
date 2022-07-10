@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"); 
 .header{
+    margin-left: 40%;
     text-align: center;
     font-family:'Major Mono Display';
-    font-size: 30px;
+    font-size: 40px;
     line-height: 25px;
     font-weight: normal;
     color:black;
-   
+    top:5px;
+    position:absolute;
 }
