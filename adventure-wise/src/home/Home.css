@@ -9,13 +9,39 @@ text-align: center;
     padding-bottom: 10%;
 }
 
+.parisContainer{
+    width: 170px;
+    height: 100px;
+}
+
 .center {
     margin: auto;
     width: 18%;
     /* border: 2px solid black; */
     padding: 8px;
+    padding-bottom: 5%;
     /* flex-wrap: wrap; */
   }
+
+.imagesLeftHalf{
+    flex: 1;
+    width: 45%;
+    height: auto;
+    
+}
+
+.imagesRightHalf{
+    flex: 1;
+    width: 45%;
+    height: auto;
+    
+}
+
+.buttonImg{
+    padding-bottom: 10%;
+    background-color: white;
+    border: white;
+}
 
 .leftHalf {
     /* flex-direction: column; */
@@ -36,15 +62,20 @@ text-align: center;
     /* flex-direction: column; */
     /* align-self: flex-start; */
     /* padding-left: 3%; */
+    padding-top: 2%;
     margin-left: 3%;
     margin-right: 3%;
-    background-color: lightgray;
+    background-color:white;
     width: 40%;
     height: 400px;
     padding-bottom: 5%;
     text-align: center;
     flex: 1
 
+}
+
+.imageHalves{ 
+    display: flex;
 }
 
 .halves{
