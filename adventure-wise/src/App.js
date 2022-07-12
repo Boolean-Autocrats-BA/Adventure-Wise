@@ -1,12 +1,15 @@
-import React from 'react';
-import Home from  '/Users/anthonyclay/coding/Adventure-Wise/adventure-wise/src/home/Home.js';
+import React from "react";
+import Trips from "./my-trips/Trips.jsx";
+import { PlaceProvider } from "./context/PlaceContext";
 
 function App() {
-   return (
-   <div className="App">
-      <Home />
-   </div>
-      );
+  return (
+    <PlaceProvider>
+      <div className="App">
+        <Trips />
+      </div>
+    </PlaceProvider>
+  );
 }
 
 export default App;
