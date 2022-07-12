@@ -1,9 +1,10 @@
 import HeaderApp from "./header/HeaderApp";
 import React, { useState } from "react";
 import Navbar from "./navbar/navbar";
-import Home from "./home/Home"
-import Explore from "./explore/Explore"
-import Trips from "./my-trips/Trips"
+import Home from "./home/Home";
+import Explore from "./explore/Explore";
+import Trips from "./my-trips/Trips";
+import Profile from "./profile/Profile";
 
 function App() {
    
@@ -38,9 +39,11 @@ function App() {
    return (
           <div className="App">
               
-              <Navbar gobackpage={gobackpage}/>
+              
               
               <HeaderApp />
+              <Navbar gobackpage={gobackpage}/>
+              <Profile /> 
           </div>
    );
 }

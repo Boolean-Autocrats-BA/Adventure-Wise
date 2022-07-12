@@ -3,7 +3,7 @@ import React from "react";
 function Explore(){
 return(
 
-    <div>this is home page</div>
+    <div>this is explore page</div>
 )
 }
 export default Explore;
