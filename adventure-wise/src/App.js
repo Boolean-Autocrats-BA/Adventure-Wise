@@ -7,46 +7,40 @@ import Trips from "./my-trips/Trips";
 import Profile from "./profile/Profile";
 
 function App() {
-   
-   const [page,setpage]=useState('')
+   const [page, setpage] = useState("");
 
-   function gobackpage(p){ 
-        setpage(p)
-         
+   function gobackpage(p) {
+      setpage(p);
    }
 
-    if (page==='home') {
-        return (
-                <div className="App">
-                    <Home gobackpage={gobackpage}/>
-                </div>
-               )
-        } else if (page==='explore') {
-        return (
-                <div className="App">
-                    <Explore gobackpage={gobackpage}/>
-                </div>
-               )
-        } else if (page==='trips') {
-        return (
-                <div className="App">
-                    <Trips gobackpage={gobackpage}/>
-                </div>
-               )
-        }
-
+   if (page === "home") {
+      return (
+         <div className="App">
+            <Home gobackpage={gobackpage} />
+         </div>
+      );
+   } else if (page === "explore") {
+      return (
+         <div className="App">
+            <Explore gobackpage={gobackpage} />
+         </div>
+      );
+   } else if (page === "trips") {
+      return (
+         <div className="App">
+            <Trips gobackpage={gobackpage} />
+         </div>
+      );
+   }
 
    return (
-          <div className="App">
-              
-              
-              
-              <HeaderApp />
-              <Navbar gobackpage={gobackpage}/>
-              <Profile /> 
-          </div>
+      <div className="App">
+         <Home />
+         <HeaderApp />
+         <Navbar gobackpage={gobackpage} />
+         <Profile />
+      </div>
    );
 }
 
 export default App;
-     
