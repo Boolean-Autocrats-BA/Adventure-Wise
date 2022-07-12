@@ -19,15 +19,28 @@ function Home(props) {
          <div className="halves">
             <div className="leftHalf">
                <div className="vertical-center">
+                  <div className="user"></div>
                   <div className="welcome">welcome, sid!</div>
                   <br></br>
-                  <h2>explore</h2>
-                  <h2>my trips</h2>
-                  <h2>about</h2>
+                  <button className="exploreBTN" onClick={ButtonOne}>
+                     explore
+                  </button>
+                  <br></br>
+                  <button className="exploreBTN" onClick={ButtonOne}>
+                     my trips
+                  </button>
+                  <br></br>
+                  <button className="exploreBTN" onClick={ButtonOne}>
+                     my account
+                  </button>
+                  <br></br>
+                  <button className="exploreBTN" onClick={ButtonOne}>
+                     about
+                  </button>
                </div>
             </div>
             <div className="rightHalf">
-               <p className="popular">popular destinations</p>
+               <div className="popular">popular destinations</div>
                <div className="imageHalves">
                   <div className="imagesLeftHalf">
                      <button className="buttonImg" onClick={ButtonOne}>

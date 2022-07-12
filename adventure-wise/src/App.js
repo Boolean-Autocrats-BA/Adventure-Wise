@@ -4,6 +4,7 @@ import Navbar from "./navbar/navbar";
 import Home from "./home/Home";
 import Explore from "./explore/Explore";
 import Trips from "./my-trips/Trips";
+import About from "./about/About";
 import Profile from "./profile/Profile";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
          <HeaderApp />
          <Navbar gobackpage={gobackpage} />
          <Profile />
+         <About />
       </div>
    );
 }
