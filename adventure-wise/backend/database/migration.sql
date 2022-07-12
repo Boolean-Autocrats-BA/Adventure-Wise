@@ -1,7 +1,12 @@
-DROP DATABASE IF EXISTS adventure_wise;
+-- DROP DATABASE IF EXISTS adventure_wise;
 
-CREATE DATABASE adventure_wise;
-\c adventure_wise
+-- CREATE DATABASE adventure_wise;
+-- \c adventure_wise
+
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS trips;
+DROP TABLE IF EXISTS place;
+DROP TABLE IF EXISTS popular_places;
 
 CREATE TABLE users(
     user_id SERIAL PRIMARY KEY,
@@ -16,9 +21,9 @@ CREATE TABLE users(
     country VARCHAR
 );
 
-CREATE TABLE itinerary(
-    itinerary_id SERIAL PRIMARY KEY,
-    itinerary_name TEXT,
+CREATE TABLE trip(
+    trip_id SERIAL PRIMARY KEY,
+    trip_name TEXT,
     user_id INT REFERENCES users(user_id) ON DELETE CASCADE
 );
 
@@ -29,7 +34,7 @@ CREATE TABLE place(
     trip_date DATE,
     trip_time TIMESTAMP,
     notes TEXT,
-    itinerary_id INT REFERENCES itinerary(itinerary_id) ON DELETE CASCADE
+    trip_id INT REFERENCES trip(trip_id) ON DELETE CASCADE
 );
 
 CREATE TABLE popular_places(
