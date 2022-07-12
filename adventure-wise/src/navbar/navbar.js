@@ -1,12 +1,19 @@
 import React from "react";
 import './navbar.css';
 
-function Navbar(){
+function Navbar({gobackpage}){
+    
+
+    function updatepage(p){ 
+        gobackpage(p)
+         
+   }
+
    return(
     <div className="navbar">
-        <button class="button" >HOME</button>
-        <button class="button" >EXPLORE</button>
-        <button class="button" >MY TRIPS</button>
+        <button className="navbutton" onClick={()=>updatepage('home')} >HOME</button>
+        <button className="navbutton" onClick={()=>updatepage('explore')}>EXPLORE</button>
+        <button className="navbutton" onClick={()=>updatepage('trips')}>MY TRIPS</button>
     </div>    
    
    )
