@@ -1,12 +1,13 @@
 import TripDetails from "./components/TripDetails";
 import TripList from "./components/TripList";
 import "./Trips.css";
+// import PlaceContext from "../context/PlaceContext";
 
 const Trips = () => {
   return (
-    <div className="myTrip-container">
-      <div className="myTrip-header">Planned Trips/Itinerary</div>
-      <div className="myTrip-overview">
+    <div className="myTrip_container">
+      <div className="myTrip_header">Planned Trips/Itinerary</div>
+      <div className="myTrip_overview">
         <TripList />
         <TripDetails />
       </div>
