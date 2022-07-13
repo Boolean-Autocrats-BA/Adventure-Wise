@@ -2,18 +2,11 @@
 .titleheader{
     margin-left: 40%;
     text-align: center;
-<<<<<<< HEAD
-    font-family:'Major Mono Display';
-    font-size: 30px;
+    width: fit-content;
     line-height: 25px;
-    font-weight: normal;
     color:black;
-    top:5px;
-    padding-bottom:20px;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 60px;
     position:absolute;
+    
 }
-=======
-    font-family:'Major Mono Display', monospace;
-    color:black;
-}
->>>>>>> main

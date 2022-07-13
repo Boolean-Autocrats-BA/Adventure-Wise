@@ -2,7 +2,7 @@ import HeaderApp from "./header/HeaderApp";
 import React, { useState } from "react";
 import Navbar from "./navbar/navbar";
 import Home from "./home/Home";
-import Explore from "./explore/Explore";
+import ExploreApp from "./explore/ExploreApp";
 import Trips from "./my-trips/Trips";
 import About from "./about/About";
 import Profile from "./profile/Profile";
@@ -23,7 +23,7 @@ function App() {
    } else if (page === "explore") {
       return (
          <div className="App">
-            <Explore gobackpage={gobackpage} />
+            <ExploreApp gobackpage={gobackpage} />
          </div>
       );
    } else if (page === "trips") {
@@ -36,13 +36,17 @@ function App() {
 
    return (
       <div className="App">
-         <Home />
          <HeaderApp />
+         {/* <Home /> */}
+         
          <Navbar gobackpage={gobackpage} />
          <Profile />
-         <About />
+         {/* <About /> */}
       </div>
    );
 }
+
+ 
+  
 
 export default App;
