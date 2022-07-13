@@ -3,12 +3,12 @@ import PlaceContext from "../../context/PlaceContext";
 import TripListItem from "./TripListItem";
 
 const TripList = () => {
-  const { places } = useContext(PlaceContext);
+  const { places, itineraryId } = useContext(PlaceContext);
 
   return (
     <div className="trip_listItems">
-      {places?.map((place) => (
-        <TripListItem key={place.id} place={place} />
+      {itineraryId?.map((id) => (
+        <TripListItem key={id} itineraryId={id} />
       ))}
     </div>
   );

@@ -26,7 +26,7 @@
 
 .trip_details {
     border: 0.5px solid black;
-    background-color: wheat;
+    background-color: white;
     padding: 2px;
     margin: 2px;
     width: 85vw;
@@ -49,9 +49,19 @@ table {
     width: 100%;
 }
 
-th {
+td.location {
+    width: 30%;
+}
+
+td.dates {
+    width: 20%;
+    text-align: center;
+}
+
+.myTrips_tableOverview {
     text-align: left;
-    text-decoration: underline;
+    font-weight: bold;
+    background-color: wheat;
 }
 
 /* td {
