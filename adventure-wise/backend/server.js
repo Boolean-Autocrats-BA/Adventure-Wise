@@ -83,6 +83,16 @@ app.get("/users/trips/:id", async (req, res) => {
    }
 });
 
+app.get("/users/trips/:id/places", async (req, res) => {
+   const tripID = req.params.id;
+   try {
+      const tripInfo = await pool.query("SELECT * FROM place WHERE trip_id = $1", [tripID]);
+      res.json(tripInfo.rows);
+   } catch {
+      res.status(500).send();
+   }
+});
+
 app.listen(PORT, () => {
    console.log(`Listening on PORT ${PORT}`);
 });
