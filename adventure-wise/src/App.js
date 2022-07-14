@@ -5,7 +5,6 @@ import Home from "./home/Home";
 import ExploreApp from "./explore/ExploreApp";
 import SelectedSearch from "./explore/components/SelectedSearch";
 import { SearchProvider } from "./context/SearchContext";
-import React from "react";
 import Trips from "./my-trips/Trips";
 import About from "./about/About";
 import Profile from "./profile/Profile";
