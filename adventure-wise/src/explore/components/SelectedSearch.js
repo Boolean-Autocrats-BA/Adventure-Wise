@@ -17,11 +17,11 @@ function SelectedSearch() {
                 <input type="datetime-local" id="end-DT"></input>
                 <br></br>
                 <textarea maxLength="1000" placeholder="What will you be doing here?" id='notes-Input' className="notes-Input"></textarea>
-                <button class="add" role="button">Add to list</button>
+                <button class="add-ListButton" role="button">Add to list</button>
         </div>
 
     )
 }
-//test
+
 
 export default SelectedSearch;
