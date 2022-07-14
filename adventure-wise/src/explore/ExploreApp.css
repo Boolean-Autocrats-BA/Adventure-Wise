@@ -1,5 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap%22');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
-.test {
-    font-size: large;
+.Explore-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+    font-family: "Major Mono Display";
+    align-items: center;
+}
+
+.Place-SearchForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+}
+
+#Place-SearchBar{
+    width: 80%;
+    background-color:#ffffff;
+    height: 28px;
+    /* color: white; */
+    opacity: 90%;
+    border: 10;
+}
+
+::placeholder {
+/* color: white; */
+opacity: 1;
+}
+
+#CategorySelect{
+    background-color: #444343;
+    height: 28px;
+    color: white;
+    opacity: 90%;
+    text-align: center;
+    margin-right: px;
+}
+
+#Place-SearchButton{
+    height: 28px;
+    background-color: #000000;
+    color: white;
+    border: 0;
+    width: 100px;
+}
+
+.Search-SideBar {
+    position: fixed;
+    width: 300px;
+    font-family: sans-serif;
+    font-size: 21px;
+    overflow-y: scroll;
+    top: 20%;
+    left: 2%;
+    height: 650px;
+    
+}
+
+.Trips-SideBar {
+    position: fixed;
+    width: 300px;
+    background-color: rgb(255, 255, 255); 
+    font-family: sans-serif;
+    font-size: 21px;
+    overflow-y: scroll;
+    top: 20%;
+    right: 2%;
+    height: 370px;
+    color: #000000;
+}
+
+.Result-Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    background-color: #778899b3;
+    margin-bottom: 10px;
+}
+
+.Search-SideBarTitle {
+color:rgb(255, 255, 255);
+text-align: center;
+}
+
+.Search-SideBarContainer {
+    position:fixed;
+    width: 325px;
+    font-family: sans-serif;
+    font-size: 21px;
+    top: 10%;
+    left: 1%;
+    height: 780px;
+    background-color: rgba(0, 0, 0, 0.812);
+
+}
+
+.Result-CardImg {
+border-style: solid;
+border-color: #ffffff;
+    width: 200px;
+    height: 150px;
+}
+
+.Trips-SideBarContainer {
+    position: fixed;
+    width: 325px;
+    background-color: rgba(0, 0, 0, 0.812);
+    color:#ffffff;
+    font-family: sans-serif;
+    font-size: 21px;
+    top: 10%;
+    right: 1%;
+    height: 500px;
+}
+
+.Trips-SideBarInd{
+   
+    margin-bottom: 5px;
+    height: fit-content;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+
+}
+
+.Trip-SideBarCardContent {
+    background-color: white;
+}
+
+.Selected-SearchContainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+details > summary {
+    list-style: none;
+    padding: 1rem;
+    border: solid rgba(0, 0, 0, 0.812);
+    background-color: #d3151573;
+}
+
+.add-ListButton {
+  background: #00b499;
+  border: 1px solid #00b499;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.add-ListButton:hover,
+.add-ListButton:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #00b499;
+}
+
+.add-ListButton:active {
+  opacity: .5;
+}
+
+#notes-Input{
+    min-width: 250px;
+    min-height: 200px;
+    max-width: 250px;
+    max-height: 300px;
 }

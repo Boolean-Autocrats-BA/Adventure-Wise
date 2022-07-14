@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Navbar from "./navbar/navbar";
 import Home from "./home/Home";
 import ExploreApp from "./explore/ExploreApp";
+import SelectedSearch from "./explore/components/SelectedSearch";
+import { SearchProvider } from "./context/SearchContext";
+import React from "react";
 import Trips from "./my-trips/Trips";
 import About from "./about/About";
 import Profile from "./profile/Profile";
@@ -37,16 +40,16 @@ function App() {
    return (
       <div className="App">
          <HeaderApp />
-         {/* <Home /> */}
-         
+         <Home />
+         <SearchProvider>
+            <ExploreApp />
+            <SelectedSearch />
+         </SearchProvider>
          <Navbar gobackpage={gobackpage} />
          <Profile />
-         {/* <About /> */}
+         <About />
       </div>
    );
 }
-
- 
-  
 
 export default App;
