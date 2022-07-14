@@ -1,23 +1,17 @@
 import React from "react";
-import './navbar.css';
+import { Link } from "react-router-dom";
+import "./navbar.css";
 
-function Navbar({gobackpage}){
-    
-
-    function updatepage(p){ 
-        gobackpage(p)
-         
-   }
-
-   return(
-    <div className="navbar">
-        <button className="navbutton" onClick={()=>updatepage('home')} >HOME</button>
-        <button className="navbutton" onClick={()=>updatepage('explore')}>EXPLORE</button>
-        <button className="navbutton" onClick={()=>updatepage('trips')}>MY TRIPS</button>
-    </div>    
-   
-   )
-
+function Navbar() {
+   return (
+      <div className="navbar">
+         <Link to="home">home</Link>
+         <Link to="explore">explore</Link>
+         <Link to="mytrips">my trips</Link>
+         <Link to="about">about</Link>
+         <Link to="myprofile">my profile</Link>
+      </div>
+   );
 }
 
 export default Navbar;

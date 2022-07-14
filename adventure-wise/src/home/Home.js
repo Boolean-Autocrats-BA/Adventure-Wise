@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-// import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Home(props) {
    function ButtonOne() {
@@ -9,34 +9,24 @@ function Home(props) {
 
    return (
       <div className="Home">
-         <h1 className="center">
-            <style>
-               @import
-               url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Major+Mono+Display&display=swap');
-            </style>
-            Adventure<br></br>Wise
-         </h1>
          <div className="halves">
             <div className="leftHalf">
                <div className="vertical-center">
                   <div className="user"></div>
                   <div className="welcome">welcome, sid!</div>
                   <br></br>
-                  <button className="exploreBTN" onClick={ButtonOne}>
+                  <Link className="exploreBTN" to="explore">
                      explore
-                  </button>
-                  <br></br>
-                  <button className="exploreBTN" onClick={ButtonOne}>
+                  </Link>
+                  <Link className="exploreBTN" to="mytrips">
                      my trips
-                  </button>
-                  <br></br>
-                  <button className="exploreBTN" onClick={ButtonOne}>
-                     my account
-                  </button>
-                  <br></br>
-                  <button className="exploreBTN" onClick={ButtonOne}>
+                  </Link>
+                  <Link className="exploreBTN" to="about">
                      about
-                  </button>
+                  </Link>
+                  <Link className="exploreBTN" to="myprofile">
+                     my profile
+                  </Link>
                </div>
             </div>
             <div className="rightHalf">

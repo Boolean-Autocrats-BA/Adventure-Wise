@@ -1,5 +1,4 @@
-
-.navbutton{
+/* .navbutton{
    top:200px;
    right: left;
    margin-right: 220px;
@@ -12,4 +11,10 @@
    background-color: white;
    cursor: pointer;
    position:relative;
+} */
+
+.navbar {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   justify-items: center;
 }

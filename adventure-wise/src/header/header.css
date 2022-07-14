@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"); 
-.titleheader{
-    margin-left: 40%;
-    text-align: center;
-    width: fit-content;
-    line-height: 25px;
-    color:black;
-    font-family: 'Major Mono Display', monospace;
-    font-size: 60px;
-    position:absolute;
-    
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+.titleheader {
+   text-align: -webkit-center;
+   width: 100%;
+   color: black;
+   font-family: "Major Mono Display", monospace;
+   font-size: 60px;
 }
