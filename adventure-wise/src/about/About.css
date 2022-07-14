@@ -1,0 +1,91 @@
+h1{
+    font-family: 'Lato', sans-serif;
+font-family: 'Major Mono Display', monospace;
+text-align: center;
+}
+
+.welcome{
+    font-size:xx-large;
+    padding-bottom: 10%;
+}
+
+.parisContainer{
+    /* width: 220px;
+    height: 135px; */
+    width:60%;
+    /* height:100% */
+    /* height:fit-content; */
+}
+
+.center {
+    margin: auto;
+    width: 18%;
+    /* border: 2px solid black; */
+    padding: 8px;
+    padding-bottom: 5%;
+    padding-top: 2.5%;
+    /* flex-wrap: wrap; */
+  }
+
+.imagesLeftHalf{
+    flex: 1;
+    width: 45%;
+    /* height: auto; */
+}
+
+.imagesRightHalf{
+    flex: 1;
+    width: 45%;
+    /* height: auto; */
+    
+}
+
+.buttonImg{
+    /* padding-bottom: 5%; */
+    /* height: 50px; */
+    background-color: white;
+    border: white;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.aboutMain {
+    padding-top: 2%;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Major Mono Display', monospace;
+    background-color: lightgray;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.imageHalves{ 
+    display: flex;
+}
+
+.halves{
+    /* height: 700px; */
+    /* flex-direction: row; */
+    display: flex
+}
+.vertical-center {
+    /* margin: 0;
+    position:relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); */
+    align-content: center;
+    font-size: x-large;
+    
+  }
+
+  .home{
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  .popular{
+    font-size: xx-large;
+    align-self: flex-start;
+  }
