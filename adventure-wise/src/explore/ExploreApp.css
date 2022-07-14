@@ -18,10 +18,10 @@
 }
 
 #Place-SearchBar{
-    width: 80%;
+    width: 60%;
     background-color:#ffffff;
     height: 28px;
-    /* color: white; */
+   margin-top: 20px;
     opacity: 90%;
     border: 10;
 }
@@ -29,15 +29,6 @@
 ::placeholder {
 /* color: white; */
 opacity: 1;
-}
-
-#CategorySelect{
-    background-color: #444343;
-    height: 28px;
-    color: white;
-    opacity: 90%;
-    text-align: center;
-    margin-right: px;
 }
 
 #Place-SearchButton{
@@ -48,76 +39,27 @@ opacity: 1;
     width: 100px;
 }
 
-.Search-SideBar {
-    position: fixed;
-    width: 300px;
-    font-family: sans-serif;
-    font-size: 21px;
-    overflow-y: scroll;
-    top: 20%;
-    left: 2%;
-    height: 650px;
-    
-}
-
-.Trips-SideBar {
-    position: fixed;
-    width: 300px;
-    background-color: rgb(255, 255, 255); 
-    font-family: sans-serif;
-    font-size: 21px;
-    overflow-y: scroll;
-    top: 20%;
-    right: 2%;
-    height: 370px;
-    color: #000000;
-}
-
 .Result-Card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content:flex-start;
     border: solid black;
     background-color: #778899b3;
     margin-bottom: 10px;
-}
-
-.Search-SideBarTitle {
-color:rgb(255, 255, 255);
-text-align: center;
-}
-
-.Search-SideBarContainer {
-    position:fixed;
-    width: 325px;
-    font-family: sans-serif;
-    font-size: 21px;
-    top: 10%;
-    left: 1%;
-    height: 780px;
-    background-color: rgba(0, 0, 0, 0.812);
-
+    width: 500px;
+    cursor: pointer;
 }
 
 .Result-CardImg {
 border-style: solid;
 border-color: #ffffff;
-    width: 200px;
-    height: 150px;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-.Trips-SideBarContainer {
-    position: fixed;
-    width: 325px;
-    background-color: rgba(0, 0, 0, 0.812);
-    color:#ffffff;
-    font-family: sans-serif;
-    font-size: 21px;
-    top: 10%;
-    right: 1%;
-    height: 500px;
-}
 
 .Trips-SideBarInd{
    
@@ -137,13 +79,17 @@ border-color: #ffffff;
 display: flex;
 flex-direction: column;
 align-items: center;
+font-family: sans-serif;
 }
 
 details > summary {
     list-style: none;
     padding: 1rem;
     border: solid rgba(0, 0, 0, 0.812);
-    background-color: #d3151573;
+    background-color: #00b499e0;
+    color:#FFFFFF;
+    text-shadow:  0 0 2px rgb(0, 0, 0);
+    font-size: large;
 }
 
 .add-ListButton {
@@ -184,8 +130,216 @@ details > summary {
 }
 
 #notes-Input{
-    min-width: 250px;
+    min-width: 400px;
     min-height: 200px;
-    max-width: 250px;
+    max-width: 400px;
     max-height: 300px;
+}
+
+/* The sidepanel menu */
+.Search-Sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position:absolute; /* Stay in place */
+    color: rgb(0, 0, 0);
+    font-size: small;
+    font-family: sans-serif;
+    /* top: -50%; */
+    left: 2%;
+    top: 950px;
+    background-color: rgba(29, 29, 29, 0.945); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  }
+  
+  /* The sidepanel links */
+  .Search-Sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .Search-Sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .Search-Sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position:absolute;
+    top: 955px;
+    left: 2%;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  .Result-CardTitle {
+color:#FFFFFF;
+text-shadow:  0 0 2px rgb(0, 0, 0);
+  }
+
+  .Trip-Sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position:absolute; /* Stay in place */
+    color: rgb(0, 0, 0);
+    font-size: small;
+    font-family: sans-serif;
+    /* top: -50%; */
+    left: 82%;
+    top: 950px;
+    background-color: rgba(29, 29, 29, 0.945); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  }
+  
+  /* The sidepanel links */
+  .Trip-Sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .Trip-Sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .Trip-Sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style the button that is used to open the sidepanel */
+  .openTripbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position:absolute;
+    top: 955px;
+    left: 82%;
+  }
+  
+  .openTripbtn:hover {
+    background-color: #444;
+  }
+
+  .closeTripbtn{
+    position: inherit;
+top: 1%;
+right: 10%;
+  }
+
+#start-DT{
+height: 20px;
+width: 200px;
+font-family:sans-serif;
+font-weight: 540;
+border: solid #00b499;
+font-weight: 550;
+font-size: medium;
+}
+
+#end-DT{
+    height: 20px;
+    font-family:sans-serif;
+    width: 200px;
+    border: solid #ff0000;
+    border-radius: 4%;
+    font-weight: 550;
+    font-size: medium;
+}
+
+.Selected-SearchTitle{
+    font-family: sans-serif;
+    font-size: 45px;
+
+}
+
+.Search-BarButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+background: #0095e5;
+  border: 1px solid #0095e5;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 35px;
+  max-height: 35px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+
+.Search-BarButton:hover,
+.Search-BarButton:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #0095e5;
+}
+
+.Search-BarButton:active {
+  opacity: .5;
+}
+
+.Search-BarContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.Selected-SearchImage{
+    margin-top: 40px;
+    height: 500px;
+    width: 750px;
+    border-radius: 8%;
 }
