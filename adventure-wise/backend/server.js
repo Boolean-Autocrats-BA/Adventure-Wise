@@ -14,14 +14,19 @@ app.use(cors());
 
 // POST REQ TO CREATE/REGISTER USER
 app.post("/users", async (req, res) => {
-   const { first_name, last_name, email, password, address, city, state, zipcode, country } = req.body;
+   const { first_name, last_name, email, password } = req.body;
    try {
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const newUser = await pool.query(
-         "INSERT INTO users (first_name, last_name, email, password, address, city, state, zipcode, country) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)",
-         [first_name, last_name, email, hashedPassword, address, city, state, zipcode, country]
-      );
-      res.json("Account Created!");
+      const checkIfExists = await pool.query("SELECT email FROM users WHERE email = $1", [email]);
+      if (checkIfExists.rows.length != 0) {
+         res.json("User already exists");
+      } else {
+         const hashedPassword = await bcrypt.hash(password, 10);
+         const newUser = await pool.query(
+            "INSERT INTO users (first_name, last_name, email, password) VALUES ($1, $2, $3, $4) ON CONFLICT DO NOTHING RETURNING *",
+            [first_name, last_name, email, hashedPassword]
+         );
+         res.json("Account Created!");
+      }
    } catch {
       res.status(500).send();
    }
