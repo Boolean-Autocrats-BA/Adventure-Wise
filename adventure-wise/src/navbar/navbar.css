@@ -1,20 +1,13 @@
-/* .navbutton{
-   top:200px;
-   right: left;
-   margin-right: 220px;
-   text-align: left ;
-   font-size: 25px;
-   
-   font-family:'Courier New', Courier, monospace;
-   border: none;
-   width: 200px;
-   background-color: white;
-   cursor: pointer;
-   position:relative;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
 .navbar {
+   font-family: "Major Mono Display", monospace;
    display: grid;
    grid-template-columns: repeat(5, 1fr);
    justify-items: center;
+}
+
+.navBarBtn {
+   text-decoration: none;
+   padding: 10px;
 }

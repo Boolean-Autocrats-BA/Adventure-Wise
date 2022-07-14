@@ -4,7 +4,7 @@ import "./header.css";
 function HeaderApp() {
    return (
       <div className="titleheader">
-         <h1>
+         <h1 className="appName">
             Adventure
             <br />
             Wise

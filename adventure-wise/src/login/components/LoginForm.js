@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import UserContext from "../../context/UserContext";
 
 export default function LoginForm() {
    const { register, handleSubmit, resetField } = useForm({
@@ -9,8 +10,9 @@ export default function LoginForm() {
       },
    });
 
+   const { setUser, setLoggedIn } = useContext(UserContext);
+
    const onSubmit = (data) => {
-      console.log(data);
       fetch("http://localhost:3050/users/login", {
          method: "POST",
          headers: {
@@ -19,7 +21,10 @@ export default function LoginForm() {
          body: JSON.stringify(data),
       })
          .then((res) => res.json())
-         .then((response) => console.log(response));
+         .then((user) => {
+            setUser(user);
+            setLoggedIn(true);
+         });
       resetField("email");
       resetField("password");
    };

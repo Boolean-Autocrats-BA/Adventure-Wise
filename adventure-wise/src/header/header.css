@@ -2,8 +2,13 @@
 
 .titleheader {
    text-align: -webkit-center;
+   margin: 0;
    width: 100%;
    color: black;
    font-family: "Major Mono Display", monospace;
    font-size: 60px;
+}
+
+.appName {
+   margin: 0;
 }

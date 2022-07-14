@@ -5,7 +5,6 @@ export default function SignupForm() {
    const { register, handleSubmit } = useForm();
 
    const onSubmit = (data) => {
-      console.log(data);
       fetch("http://localhost:3050/users", {
          method: "POST",
          headers: {

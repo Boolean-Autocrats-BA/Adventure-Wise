@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
-function Home(props) {
+function Home({ user }) {
    function ButtonOne() {
       alert("You clicked button one.");
    }
@@ -13,7 +13,7 @@ function Home(props) {
             <div className="leftHalf">
                <div className="vertical-center">
                   <div className="user"></div>
-                  <div className="welcome">welcome, sid!</div>
+                  <div className="welcome">welcome, {user.first_name}!</div>
                   <br></br>
                   <Link className="exploreBTN" to="explore">
                      explore

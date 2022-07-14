@@ -11,6 +11,7 @@
    font-family: "Major Mono Display", monospace;
    font-size: 64px;
    margin: 0 0 20px 0;
+   width: 100% !important;
 }
 
 #loginButton {
