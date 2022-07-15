@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import PlaceContext from "../../context/PlaceContext";
 
-const TripDetailsOverview = () => {
+const TripDetailsOverview = ({ dates }) => {
+  const { myTrip, itineraryId } = useContext(PlaceContext);
+  const simpleDate = new Date(dates.trip_date);
+  const tripDate = simpleDate.toDateString();
+
+  const trip = myTrip.filter((trip) => trip[`trip_id`] == itineraryId);
+
   return (
     <table className="myTrips_tableOverview">
       <thead>
         <tr>
-          <th>Family Reunion</th>
-          <th>12 - 16 Aug 2022</th>
-          <th>7 Places</th>
+          <th>{trip[0].trip_name}</th>
+          <th>{tripDate}</th>
+          <th># of Places</th>
         </tr>
       </thead>
     </table>

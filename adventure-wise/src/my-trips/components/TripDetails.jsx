@@ -1,20 +1,30 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
+import UserContext from "../../context/UserContext";
 import TripItemDetails from "./TripItemDetails";
 import TripDetailsOverview from "./TripDetailsOverview";
 
 const TripDetails = () => {
-  const { places } = useContext(PlaceContext);
-  const { isTripAdded } = useContext(PlaceContext);
+  const { places, setPlaces, isTripAdded, isTripSelected } =
+    useContext(PlaceContext);
+  const { userID } = useContext(UserContext);
+
+  useEffect(() => {
+    fetch(`http://localhost:3050/users/trips/${userID}/places`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPlaces(data);
+      });
+  }, []);
 
   return (
     <div className="trip_details">
-      <TripDetailsOverview />
+      {isTripSelected ? <TripDetailsOverview dates={places[0]} /> : <></>}
       <table className="tripDetails_table">
         <tbody>
           {!isTripAdded ? (
             <tr>
-              <td>Select a trip from the list on the left</td>
+              <td>Select a trip from your list to view details</td>
             </tr>
           ) : (
             places.map((place) => (
