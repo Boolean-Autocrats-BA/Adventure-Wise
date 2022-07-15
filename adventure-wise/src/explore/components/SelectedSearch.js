@@ -6,7 +6,8 @@ function SelectedSearch() {
 
     return (
         <div className="Selected-SearchContainer">
-                <h1>{selSearch.title}</h1>
+                <img className="Selected-SearchImage" src={selSearch.image_url}></img>
+                <h1 class="Selected-SearchTitle">{selSearch.title}</h1>
                 <p>{selSearch.address}</p>
                 <label className="start-DTLabel">Start date and time :</label>
                 <br></br>
@@ -17,7 +18,7 @@ function SelectedSearch() {
                 <input type="datetime-local" id="end-DT"></input>
                 <br></br>
                 <textarea maxLength="1000" placeholder="What will you be doing here?" id='notes-Input' className="notes-Input"></textarea>
-                <button class="add-ListButton" role="button">Add to list</button>
+                <button class="add-ListButton" role="button">Add to trip</button>
         </div>
 
     )
