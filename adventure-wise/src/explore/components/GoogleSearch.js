@@ -1,21 +1,17 @@
-import React, { useState } from "react";
-import { useLoadScript } from "@react-google-maps/api";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import usePlacesAutocomplete, { getDetails } from "use-places-autocomplete";
+import UserContext from "../../context/UserContext";
 
-export default function GoogleSearch() {
-   const { isLoaded } = useLoadScript({
-      googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-      libraries: ["places"],
-   });
+export default function GoogleSearch(isLoaded) {
 
-   const [searchRes, setSearchRes] = useState(null);
+   const {setSearchRes, searchRes} = useContext(UserContext)
 
    const {
       value,
       suggestions: { data },
       setValue,
-   } = usePlacesAutocomplete({ cache: 86400, debounce: 500 });
+   } = usePlacesAutocomplete({ cache: 86400, debounce: 200 });
 
    const { handleSubmit } = useForm();
 
@@ -24,6 +20,7 @@ export default function GoogleSearch() {
    };
 
    const onSubmit = () => {
+      setSearchRes(null)
       const placeRes = [];
       data.map((results) => {
          const { place_id } = results;
@@ -48,14 +45,15 @@ export default function GoogleSearch() {
          ],
       };
 
-      if (searchRes.length !== 0) {
+      console.log(searchRes)
+
          searchRes.map((id) => {
             parameters.placeId = id;
             getDetails(parameters).then((details) => {
                console.log(details);
             });
          });
-      }
+      
    };
 
    // clear out previous search results to be able to push new ones into the state or a better logic
@@ -64,9 +62,9 @@ export default function GoogleSearch() {
       return <h1>Loading...</h1>;
    } else {
       return (
-         <form onSubmit={handleSubmit(onSubmit)}>
-            <input value={value} onChange={handleInput} placeholder="search" />
-            <input type="submit" />
+         <form className='Search-BarContainer' onSubmit={handleSubmit(onSubmit)}>
+            <input id="Place-SearchBar" value={value} onChange={handleInput} placeholder="search" />
+            <input className="Search-BarButton" type="submit" value='Search'/>
          </form>
       );
    }

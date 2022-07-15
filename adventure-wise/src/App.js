@@ -15,7 +15,7 @@ import UserContext from "./context/UserContext";
 
 function App() {
    const [tripPlaces, setTripPlaces] = useState(null);
-   const { loggedIn, setLoggedIn, userID, setUser, userProfile, setUserProfile, userTrips, setUserTrips } =
+   const { loggedIn, setLoggedIn, userID, setUser, userProfile, setUserProfile, userTrips, setUserTrips, searchRes, setSearchRes } =
       useContext(UserContext);
 
    const getUser = () => {

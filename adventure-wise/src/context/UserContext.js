@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { useLoadScript } from "@react-google-maps/api";
 
 const UserContext = createContext();
 
@@ -7,6 +8,12 @@ export const UserProvider = ({ children }) => {
    const [userID, setUser] = useState(null);
    const [userProfile, setUserProfile] = useState(null);
    const [userTrips, setUserTrips] = useState(null);
+   const [searchRes, setSearchRes] = useState(null);
+
+   const { isLoaded } = useLoadScript({
+      googleMapsApiKey: ,
+      libraries: ["places"],
+   });
 
    return (
       <UserContext.Provider
@@ -19,6 +26,8 @@ export const UserProvider = ({ children }) => {
             setUserProfile,
             userTrips,
             setUserTrips,
+            searchRes,
+            setSearchRes
          }}
       >
          {children}
