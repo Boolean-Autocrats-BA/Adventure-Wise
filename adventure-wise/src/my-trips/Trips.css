@@ -2,14 +2,13 @@
 
 .myTrip_container {
     border: 1px dashed black;
-    background-color: aqua;
+    background-color: lightgray;
     padding: 2px;
     font-family: 'Mono Display', monospace;
     height: 75vh;
 }
 
 .myTrip_header {
-    border: 1px solid blue;
     padding: 3px;
     margin: 2px;
     text-align: center;
@@ -43,6 +42,9 @@
 
 .trip_btn {
     margin: 2px;
+    background-color: aqua;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 table {
