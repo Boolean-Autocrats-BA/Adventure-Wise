@@ -1,21 +1,25 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext, useState } from "react";
 import PlaceContext from "../../context/PlaceContext";
-import UserContext from "../../context/UserContext";
 import TripItemDetails from "./TripItemDetails";
 import TripDetailsOverview from "./TripDetailsOverview";
 
 const TripDetails = () => {
-  const { places, setPlaces, isTripAdded, isTripSelected } =
+  const { places, isTripAdded, isTripSelected, loading } =
     useContext(PlaceContext);
-  const { userID } = useContext(UserContext);
 
-  useEffect(() => {
-    fetch(`http://localhost:3050/users/trips/${userID}/places`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPlaces(data);
-      });
-  }, []);
+  if (loading) {
+    return (
+      <div className="trip_details">
+        <table className="tripDetails_table">
+          <tbody>
+            <tr>
+              <td>Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+  }
 
   return (
     <div className="trip_details">

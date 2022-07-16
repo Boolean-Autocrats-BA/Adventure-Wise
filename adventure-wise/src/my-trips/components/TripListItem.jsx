@@ -1,15 +1,39 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
 const TripListItem = ({ tripId }) => {
-  const { setIsTripSelected, setItineraryId, setTripAdded } =
-    useContext(PlaceContext);
+  const {
+    setIsTripSelected,
+    setTripAdded,
+    setLoading,
+    setPlaces,
+    places,
+    setSelectedTripId,
+  } = useContext(PlaceContext);
 
   const addTripDetails = (e) => {
+    const targetId = e.target.id;
+
+    setSelectedTripId(targetId);
     setIsTripSelected(true);
-    setItineraryId(e.target.id);
     setTripAdded(true);
+    setLoading(true);
+    getPlaces(targetId);
   };
+
+  const getPlaces = (targetId) => {
+    fetch(`http://localhost:3050/users/trips/${targetId}/places`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPlaces(data);
+      });
+  };
+
+  useEffect(() => {
+    if (places.length > 0) {
+      setLoading(false);
+    }
+  }, [places]);
 
   return (
     <button id={tripId} onClick={addTripDetails} className="trip_btn">
