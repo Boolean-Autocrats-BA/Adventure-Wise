@@ -20,7 +20,7 @@ const TripDetailsOverview = ({ dates }) => {
   return (
     <table className="myTrips_tableOverview">
       <thead>
-        <tr>
+        <tr className="myTrips_OverviewRow">
           <th>{getTripName()}</th>
           <th>{getDates()}</th>
           <th>{places.length} Places</th>

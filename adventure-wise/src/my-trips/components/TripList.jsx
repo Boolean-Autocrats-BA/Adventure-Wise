@@ -3,7 +3,7 @@ import UserContext from "../../context/UserContext";
 import TripListItem from "./TripListItem";
 
 const TripList = () => {
-  const { userID, userTrips } = useContext(UserContext);
+  const { userTrips } = useContext(UserContext);
 
   const [tripIdArr, setTripIdArr] = useState([]);
 
@@ -16,8 +16,8 @@ const TripList = () => {
 
   return (
     <div className="trip_listItems">
-      {tripIdArr?.map((id) => (
-        <TripListItem key={id} tripId={id} />
+      {tripIdArr?.map((id, index) => (
+        <TripListItem key={id} tripId={id} tripNum={index} />
       ))}
     </div>
   );

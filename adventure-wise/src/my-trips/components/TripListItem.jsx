@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
-const TripListItem = ({ tripId }) => {
+const TripListItem = ({ tripId, tripNum }) => {
   const {
     setIsTripSelected,
     setTripAdded,
@@ -37,7 +37,7 @@ const TripListItem = ({ tripId }) => {
 
   return (
     <button id={tripId} onClick={addTripDetails} className="trip_btn">
-      Trip {tripId}
+      Trip {tripNum + 1}
     </button>
   );
 };
