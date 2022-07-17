@@ -1,24 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 import TripItemDetails from "./TripItemDetails";
 import TripDetailsOverview from "./TripDetailsOverview";
+import Loading from "./Loading";
 
 const TripDetails = () => {
   const { places, isTripAdded, isTripSelected, loading } =
     useContext(PlaceContext);
 
   if (loading) {
-    return (
-      <div className="trip_details">
-        <table className="tripDetails_table">
-          <tbody>
-            <tr>
-              <td>Loading...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    );
+    return <Loading />;
   }
 
   return (
