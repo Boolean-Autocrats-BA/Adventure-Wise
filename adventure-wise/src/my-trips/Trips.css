@@ -63,5 +63,6 @@ td.dates {
 .myTrips_tableOverview {
     text-align: left;
     font-weight: bold;
+    font-size: large;
     background-color: wheat;
 }
