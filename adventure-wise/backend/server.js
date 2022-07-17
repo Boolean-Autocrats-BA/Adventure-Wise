@@ -53,7 +53,7 @@ app.post("/users", async (req, res) => {
             "INSERT INTO users (first_name, last_name, email, password) VALUES ($1, $2, $3, $4) ON CONFLICT DO NOTHING RETURNING *",
             [first_name, last_name, email, hashedPassword]
          );
-         res.json("Account Created!");
+         res.json("OK");
       }
    } catch {
       res.status(500).json("Uh oh... Something went wrong");

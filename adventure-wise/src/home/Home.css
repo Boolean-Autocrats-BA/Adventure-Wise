@@ -6,117 +6,88 @@ h1 {
    width: fit-content;
 }
 
-.welcome {
-   font-size: x-large;
-   padding-bottom: 10%;
-   padding-top: 5%;
+.homeGrid {
+   display: grid;
+   width: 100%;
+   height: 100%;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas:
+      "user popular-places"
+      "user popular-places"
+      "user popular-places";
 }
 
-.parisContainer {
-   /* width: 220px;
-    height: 135px; */
-   width: 90%;
-   /* height:100% */
-   /* height:fit-content; */
-}
-
-.center {
-   margin: auto;
-   /* width: 18%; */
-   width: fit-content;
-   /* border: 2px solid black; */
-   padding: 8px;
-   padding-bottom: 5%;
-   padding-top: 2.5%;
-   /* flex-wrap: wrap; */
-}
-
-.imagesLeftHalf {
-   flex: 1;
-   width: 45%;
-   /* height: auto; */
-}
-
-.imagesRightHalf {
-   flex: 1;
-   width: 45%;
-   /* height: auto; */
-}
-
-.buttonImg {
-   /* padding-bottom: 5%; */
-   /* height: 50px; */
-   background-color: white;
-   border: white;
-   font-family: "Lato", sans-serif;
-   font-family: "Major Mono Display", monospace;
-   font-size: large;
-}
-
-.leftHalf {
-   padding-top: 1%;
-   font-family: "Lato", sans-serif;
-   font-family: "Major Mono Display", monospace;
+.home-leftGridContainer {
+   display: flex;
+   flex-direction: column;
+   grid-area: user;
    background-color: lightgray;
-   text-align: center;
-   flex: 1;
-   margin-left: 5%;
-   margin-right: 5%;
+   align-items: center;
+   justify-content: center;
 }
-.rightHalf {
-   font-family: "Lato", sans-serif;
+
+.userPicture {
+   width: 110px;
+   height: 110px;
+   border-radius: 50%;
+   background-size: cover;
+   background-image: url("https://www.hrlact.org/wp-content/uploads/2020/12/generic-user-icon-300x300.jpg");
+}
+
+.userWelcome {
+   font-size: 40px;
+   font-family: "Quicksand", sans-serif;
+}
+
+.homeLinks {
+   color: rgb(255, 255, 255);
    font-family: "Major Mono Display", monospace;
-   background-color: white;
-   text-align: center;
-   flex: 1;
-   margin-right: 5%;
+   text-decoration: none;
+   font-size: 35px;
+   margin: 8px;
+   transition: color ease 0.5s;
 }
 
-.imageHalves {
-   display: flex;
+.homeLinks:hover {
+   font-weight: bold;
+   color: #00c0c7;
 }
 
-.halves {
-   /* height: 700px; */
-   /* flex-direction: row; */
-   display: flex;
-}
-.vertical-center {
+.homeNavFlex {
    display: flex;
    flex-direction: column;
    align-items: center;
-   flex-wrap: nowrap;
 }
 
-.Home {
+.home-rightGridContainer {
+   grid-area: popular-places;
+   font-family: "Quicksand", sans-serif;
+}
+
+#popularPlacesHeader {
+   font-size: 30px;
+   text-align: center;
+   margin: 0;
+}
+
+.destinations {
    display: grid;
-   padding-left: 3%;
-   padding-right: 3%;
+   grid-template-columns: 1fr 1fr;
+}
+
+.destinationCard {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.destinationPicture {
+   height: 150px;
+   width: 250px;
 }
 
 .popular {
    /* max-height: fit-content; */
    font-size: xx-large;
    padding-bottom: 5%;
-}
-
-.exploreBTN {
-   font-family: "Lato", sans-serif;
-   font-family: "Major Mono Display", monospace;
-   background: none;
-   border: none;
-   font-size: xxx-large;
-   padding-bottom: 2%;
-}
-
-.user {
-   display: inline-block;
-   width: 110px;
-   height: 110px;
-   border-radius: 50%;
-
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
-   background-image: url("https://www.hrlact.org/wp-content/uploads/2020/12/generic-user-icon-300x300.jpg");
 }
