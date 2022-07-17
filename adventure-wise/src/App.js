@@ -1,5 +1,5 @@
 import HeaderApp from "./header/HeaderApp";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import Login from "./login/Login";
 import Navbar from "./navbar/navbar";
 import Home from "./home/Home";
@@ -16,18 +16,7 @@ import UserContext from "./context/UserContext";
 function App() {
    const [popularPlaces, setPopularPlaces] = useState(null);
 
-   const {
-      loggedIn,
-      setLoggedIn,
-      userID,
-      setUser,
-      userProfile,
-      setUserProfile,
-      userTrips,
-      setUserTrips,
-      searchRes,
-      setSearchRes,
-   } = useContext(UserContext);
+   const { loggedIn, userID, userProfile, setUserProfile, userTrips, setUserTrips } = useContext(UserContext);
 
    const getUser = () => {
       const promises = Promise.all([
@@ -82,36 +71,3 @@ function App() {
 }
 
 export default App;
-
-{
-   /* <Login />
-<HeaderApp />
-<Home />
-<SearchProvider>
-   <ExploreApp />
-   <SelectedSearch />
-</SearchProvider>
-<Navbar gobackpage={gobackpage} />
-<Profile />
-<About /> */
-}
-
-// const [page, setpage] = useState("");
-
-// function gobackpage(p) {
-//    setpage(p);
-// }
-
-// if (page === "home") {
-//    return (
-//       <div className="App">
-//          <Home gobackpage={gobackpage} />
-//       </div>
-//    );
-// } else if (page === "explore") {
-//    return (
-//       <div className="App">
-//          <ExploreApp gobackpage={gobackpage} />
-//       </div>
-//    );
-// } else if (page === "trips") {

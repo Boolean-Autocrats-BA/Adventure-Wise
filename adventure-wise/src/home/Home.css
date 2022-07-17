@@ -24,6 +24,7 @@ h1 {
    background-color: lightgray;
    align-items: center;
    justify-content: center;
+   border-radius: 15px;
 }
 
 .userPicture {
@@ -84,6 +85,7 @@ h1 {
 .destinationPicture {
    height: 150px;
    width: 250px;
+   border-radius: 15px;
 }
 
 .popular {
