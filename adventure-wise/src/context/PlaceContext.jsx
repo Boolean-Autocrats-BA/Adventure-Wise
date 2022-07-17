@@ -5,13 +5,10 @@ const PlaceContext = createContext();
 export const PlaceProvider = ({ children }) => {
   /*used for myTrips component -Mike */
   const [places, setPlaces] = useState([]);
-  const [myTrip, setMyTrip] = useState([]);
-
-  // Used to determine if there's data to render to trip details in myTrips component -Mike
   const [isTripAdded, setTripAdded] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [isTripSelected, setIsTripSelected] = useState(false);
-  const [tripId, setTripId] = useState([]);
-  const [itineraryId, setItineraryId] = useState(null);
+  const [selectedTripId, setSelectedTripId] = useState(null);
 
   return (
     <PlaceContext.Provider
@@ -20,14 +17,12 @@ export const PlaceProvider = ({ children }) => {
         setPlaces,
         isTripAdded,
         setTripAdded,
+        loading,
+        setLoading,
         isTripSelected,
         setIsTripSelected,
-        tripId,
-        setTripId,
-        itineraryId,
-        setItineraryId,
-        myTrip,
-        setMyTrip,
+        selectedTripId,
+        setSelectedTripId,
       }}
     >
       {children}
