@@ -13,12 +13,7 @@ CREATE TABLE users(
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(150) NOT NULL,
     email VARCHAR(150) NOT NULL,
-    password TEXT NOT NULL,
-    address TEXT,
-    city TEXT,
-    state TEXT,
-    zipcode VARCHAR(30),
-    country VARCHAR
+    password TEXT NOT NULL
 );
 
 CREATE TABLE trip(

@@ -11,3 +11,8 @@
    text-decoration: none;
    padding: 10px;
 }
+
+.navBarBtn:hover {
+   cursor: pointer;
+   font-weight: bold;
+}

@@ -59,7 +59,7 @@ function Login() {
                <button id="modalCloseBtn" onClick={closeModal}>
                   X
                </button>
-               <div>{login ? <LoginForm /> : <SignupForm />}</div>
+               <div>{login ? <LoginForm /> : <SignupForm setLogin={setLogin} />}</div>
                <div>
                   {login ? (
                      <button

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function SignupForm() {
+export default function SignupForm({ setLogin }) {
    const { register, handleSubmit } = useForm();
 
    const onSubmit = (data) => {
@@ -13,7 +13,11 @@ export default function SignupForm() {
          body: JSON.stringify(data),
       })
          .then((res) => res.json())
-         .then((response) => console.log(response));
+         .then((response) => {
+            if (response === "OK") {
+               setLogin(true);
+            }
+         });
    };
 
    return (
