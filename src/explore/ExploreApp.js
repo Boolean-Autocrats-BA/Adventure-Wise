@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import "./ExploreApp.css";
 import SearchContext from "../context/SearchContext";
+import GoogleSearch from './components/GoogleSearch'
+import UserContext from "../context/UserContext";
 
 let searchObj = [
     {
@@ -72,6 +74,7 @@ let tripObj = [
 
 function ExploreApp() {
     const { setselSearch } = useContext(SearchContext)
+    const { searchRes, setSearchRes } = useContext(UserContext)
     function HandleViewButton() {
         setselSearch({
             "title": "Las Vegas Mall",
@@ -101,8 +104,7 @@ function ExploreApp() {
     return (
         <div className='Explore-container'>
             <div className="Search-BarContainer">
-            <input type="search" id="Place-SearchBar" placeholder='Enter Location'></input>
-            <button className="Search-BarButton">Search</button>
+            <GoogleSearch />
             </div>
             {/* Search Results SideBar*/}
             <div id="Search-Sidepanel" class="Search-Sidepanel">
