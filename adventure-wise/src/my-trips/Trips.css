@@ -7,7 +7,7 @@ My Trips - entitre component container
     background-color: lightgray;
     padding: 2px;
     font-family: 'Mono Display', monospace;
-    height: 75vh;
+    height: 100%;
 }
 
 /* Header for My Trips component */

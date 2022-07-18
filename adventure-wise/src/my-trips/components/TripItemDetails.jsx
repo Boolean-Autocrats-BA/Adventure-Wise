@@ -6,7 +6,11 @@ const TripItemDetails = ({ place }) => {
 
   return (
     <tr className="trip_item">
-      <td className="location">{place.place_address}</td>
+      <td className="location">
+        {place.place_name}
+        <br />
+        {place.place_address}
+      </td>
       <td className="dates">
         {date}
         <br />
