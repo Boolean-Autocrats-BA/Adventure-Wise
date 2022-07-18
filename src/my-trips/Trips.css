@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap%22");
 
+/* =======================================
+My Trips - entitre component container 
+========================================*/
 .myTrip_container {
-    /* border: 1px dashed black; */
     background-color: lightgray;
     padding: 2px;
     font-family: 'Mono Display', monospace;
     height: 75vh;
 }
 
+/* Header for My Trips component */
 .myTrip_header {
     padding: 3px;
     margin: 2px;
@@ -15,29 +18,47 @@
     font-family: 'Major Mono Display', monospace;
 }
 
+/* =======================================
+My Trips - container for the itemized numbered trips container and the trips details container
+========================================*/
 .myTrip_overview {
-    /* border: 1px solid red; */
     padding: 2px;
     margin: 4px 2px 2px 2px;
     display: flex;
     flex-direction: row;
 }
 
+/* Trip Details container section */
 .trip_details {
-    /* border: 0.5px solid black; */
     background-color: white;
     padding: 2px;
     margin: 2px;
     width: 85vw;
 }
 
+.myTrips_tableOverview {
+    text-align: left;
+    font-weight: bold;
+    font-size: large;
+    background-color: wheat;
+}
+
+.tripDetails_table {
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
 .trip_listItems {
-    /* border: 0.5px solid black; */
     padding: 2px;
     margin: 2px;
     width: 15vw;
     display: flex;
     flex-direction: column;
+}
+
+.trip_item {
+    border-bottom: 1px dotted black;
 }
 
 .trip_btn {
@@ -52,16 +73,15 @@ table {
 }
 
 td.location {
-    width: 30%;
+    width: 35%;
+    text-align: left;
 }
 
 td.dates {
-    width: 20%;
-    text-align: center;
+    width: 30%;
+    text-align: left;
 }
 
-.myTrips_tableOverview {
-    text-align: left;
-    font-weight: bold;
-    background-color: wheat;
-}
+/* td.notes {
+
+} */

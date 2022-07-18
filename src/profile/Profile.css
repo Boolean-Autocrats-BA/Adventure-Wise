@@ -1,36 +1,12 @@
-.myProfileGrid {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-areas:
-      "header"
-      "user-pic"
-      "user-info";
-   font-family: "Quicksand", sans-serif;
-   text-align: center;
-   font-size: 30px;
-   background-color: lightgray;
-   height: 100%;
-   border-radius: 15px;
-}
-
-.profile-userPicture {
-   grid-area: user-pic;
-   width: 110px;
-   height: 110px;
-   border-radius: 50%;
-   background-size: cover;
-   justify-self: center;
-}
-
-.profileLabel {
-   font-weight: bold;
-}
-
-#profileHeader {
-   grid-area: header;
-   margin: 0;
-}
-
-.profile-userInfo {
-   grid-area: user-info;
+.myinfo{
+    
+    background-color: lightgrey;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    top: 220px;
+    
+    font-size: 30px;
+    height: 80px;
+    position: relative;
+    
 }

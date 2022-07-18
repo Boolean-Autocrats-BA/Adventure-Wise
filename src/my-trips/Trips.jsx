@@ -1,7 +1,6 @@
 import TripDetails from "./components/TripDetails";
 import TripList from "./components/TripList";
 import "./Trips.css";
-// import PlaceContext from "../context/PlaceContext";
 
 const Trips = () => {
   return (
