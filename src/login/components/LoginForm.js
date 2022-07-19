@@ -24,6 +24,8 @@ export default function LoginForm() {
          .then((user) => {
             setUser(user);
             setLoggedIn(true);
+            localStorage.setItem("userID", user);
+            localStorage.setItem("loggedIn", true);
          });
       resetField("email");
       resetField("password");

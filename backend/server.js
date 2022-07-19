@@ -141,6 +141,16 @@ app.post("/users/trips", async (req, res) => {
    }
 });
 
+app.delete("/users/trips/:id", async (req, res) => {
+   const tripID = req.params.id;
+   try {
+      const deleteTrip = await pool.query("DELETE FROM trip WHERE trip_id = $1", [tripID]);
+      res.status(200).json("OK");
+   } catch {
+      res.status(500).json("Uh oh... Something went wrong");
+   }
+});
+
 //--------------------------------------- PLACE TABLE ROUTES --------------------------------------------------------//
 app.get("/users/trips/:id/places", async (req, res) => {
    const tripID = req.params.id;
