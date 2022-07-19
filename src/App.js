@@ -1,5 +1,5 @@
 import HeaderApp from "./header/HeaderApp";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Login from "./login/Login";
 import Navbar from "./navbar/navbar";
 import Home from "./home/Home";
@@ -16,7 +16,13 @@ import UserContext from "./context/UserContext";
 function App() {
    const [popularPlaces, setPopularPlaces] = useState(null);
 
-   const { loggedIn, userID, userProfile, setUserProfile, userTrips, setUserTrips } = useContext(UserContext);
+   const { loggedIn, setLoggedIn, userID, setUser, userProfile, setUserProfile, userTrips, setUserTrips } =
+      useContext(UserContext);
+
+   useEffect(() => {
+      setLoggedIn(localStorage.getItem("loggedIn"));
+      setUser(localStorage.getItem("userID"));
+   });
 
    const getUser = () => {
       const promises = Promise.all([

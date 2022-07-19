@@ -57,7 +57,7 @@ function About() {
                   <a href="https://github.com/magdielrosario97" target="_blank" rel="noreferrer">
                      <FaGithub />
                   </a>
-                  <a href="www.linkedin.com/in/msro97" target="_blank" rel="noreferrer">
+                  <a href="https://www.linkedin.com/in/msro97" target="_blank" rel="noreferrer">
                      <FaLinkedin />
                   </a>
                </div>

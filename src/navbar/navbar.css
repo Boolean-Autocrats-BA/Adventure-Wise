@@ -3,11 +3,12 @@
 .navbar {
    font-family: "Major Mono Display", monospace;
    display: grid;
-   grid-template-columns: repeat(5, 1fr);
+   grid-template-columns: repeat(6, 1fr);
    justify-items: center;
 }
 
 .navBarBtn {
+   font-size: 18px;
    text-decoration: none;
    padding: 10px;
 }
@@ -15,4 +16,12 @@
 .navBarBtn:hover {
    cursor: pointer;
    font-weight: bold;
+}
+
+#logoutBtn {
+   font-family: "Major Mono Display", monospace;
+   background: none;
+   border: none;
+   font-size: 18px;
+   color: red;
 }
