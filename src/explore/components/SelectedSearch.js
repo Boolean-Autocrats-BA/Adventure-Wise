@@ -6,9 +6,15 @@ function SelectedSearch() {
 
     return (
         <div className="Selected-SearchContainer">
-                <img className="Selected-SearchImage" src={selSearch.image_url}></img>
+                {/* <img className="Selected-SearchImage" src={selSearch.image_url}></img> */}
                 <h1 class="Selected-SearchTitle">{selSearch.title}</h1>
                 <p>{selSearch.address}</p>
+                {selSearch.website !== undefined ?
+                <a href={selSearch.website} target="_blank" rel="noreferrer"> Visit Website
+                  </a>
+                  : <p> No Website Found </p>
+                }
+                <br/>
                 <label className="start-DTLabel">Start date and time :</label>
                 <br></br>
                 <input type="datetime-local" id="start-DT"></input>

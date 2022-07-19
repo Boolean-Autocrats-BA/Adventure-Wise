@@ -5,13 +5,14 @@ import UserContext from "../../context/UserContext";
 
 export default function GoogleSearch(isLoaded) {
 
-   const {setSearchRes, searchRes} = useContext(UserContext)
+   const {setSearchRes, searchRes, setplaceDetails} = useContext(UserContext)
+
 
    const {
       value,
       suggestions: { data },
       setValue,
-   } = usePlacesAutocomplete({ cache: 86400, debounce: 200 });
+   } = usePlacesAutocomplete({ cache: 86400 });
 
    const { handleSubmit } = useForm();
 
@@ -20,14 +21,22 @@ export default function GoogleSearch(isLoaded) {
    };
 
    const onSubmit = () => {
+      setplaceDetails(null)
       setSearchRes(null)
       const placeRes = [];
       data.map((results) => {
          const { place_id } = results;
          return placeRes.push(place_id);
       });
-      setSearchRes(placeRes);
-      renderPlaceResults();
+      if (placeRes == null) {
+         console.log("Not Ready Yet")
+      }
+      else {
+         setSearchRes(placeRes);
+         renderPlaceResults();
+      }
+      
+      
    };
 
    const renderPlaceResults = () => {
@@ -42,17 +51,26 @@ export default function GoogleSearch(isLoaded) {
             "types",
             "user_ratings_total",
             "website",
+            "place_id"
          ],
       };
 
-      console.log(searchRes)
-
-         searchRes.map((id) => {
-            parameters.placeId = id;
-            getDetails(parameters).then((details) => {
-               console.log(details);
-            });
-         });
+      // console.log(searchRes)
+let placeDetailsArr = [];
+if (searchRes == null) {
+   console.log("Not ready")
+}
+else {
+   searchRes.map((id) => {
+      parameters.placeId = id;
+      getDetails(parameters).then((details) => {
+         placeDetailsArr.push(details);
+         console.log(placeDetailsArr);
+         setplaceDetails(placeDetailsArr);
+      });
+   });
+   
+}  
       
    };
 
