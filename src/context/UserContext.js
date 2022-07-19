@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
    const [userProfile, setUserProfile] = useState(null);
    const [userTrips, setUserTrips] = useState(null);
    const [searchRes, setSearchRes] = useState(null);
+   const [placeDetails, setplaceDetails] = useState([]);
 
    const { isLoaded } = useLoadScript({
       googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -29,6 +30,8 @@ export const UserProvider = ({ children }) => {
             isLoaded,
             searchRes,
             setSearchRes,
+            placeDetails,
+            setplaceDetails
          }}
       >
          {children}
