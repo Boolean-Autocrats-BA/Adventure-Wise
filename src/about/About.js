@@ -28,6 +28,9 @@ function About() {
                   <a href="https://github.com/yanchaoj" target="_blank" rel="noreferrer">
                      <FaGithub />
                   </a>
+                  <a href="https://www.linkedin.com/in/lexie-jin/" target="_blank" rel="noreferrer">
+                     <FaLinkedin />
+                  </a>
                </div>
             </div>
             <div className="collabCard">
