@@ -4,84 +4,119 @@
 My Trips - entitre component container 
 ========================================*/
 .myTrip_container {
-    background-color: lightgray;
-    padding: 2px;
-    font-family: 'Mono Display', monospace;
-    height: 100%;
+   background-color: lightgray;
+   padding: 2px;
+   font-family: "Quicksand", sans-serif;
+   height: 100%;
+   border-radius: 10px;
 }
 
 /* Header for My Trips component */
 .myTrip_header {
-    padding: 3px;
-    margin: 2px;
-    text-align: center;
-    font-family: 'Major Mono Display', monospace;
+   padding: 3px;
+   margin: 2px;
+   text-align: center;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: "Quicksand", sans-serif;
 }
 
 /* =======================================
 My Trips - container for the itemized numbered trips container and the trips details container
 ========================================*/
 .myTrip_overview {
-    padding: 2px;
-    margin: 4px 2px 2px 2px;
-    display: flex;
-    flex-direction: row;
+   padding: 2px;
+   margin: 4px 2px 2px 2px;
+   display: flex;
+   flex-direction: row;
 }
 
 /* Trip Details container section */
 .trip_details {
-    background-color: white;
-    padding: 2px;
-    margin: 2px;
-    width: 85vw;
+   background-color: white;
+   padding: 2px;
+   margin: 2px;
+   width: 85vw;
+   border-radius: 10px;
 }
 
 .myTrips_tableOverview {
-    text-align: left;
-    font-weight: bold;
-    font-size: large;
-    background-color: wheat;
+   text-align: left;
+   font-weight: bold;
+   font-size: large;
+   background-color: aquamarine;
+   border-radius: 10px 10px 0px 0px;
 }
 
 .tripDetails_table {
-    table-layout: auto;
-    width: 100%;
-    border-collapse: collapse;
+   table-layout: auto;
+   width: 100%;
+   border-collapse: collapse;
 }
 
 .trip_listItems {
-    padding: 2px;
-    margin: 2px;
-    width: 15vw;
-    display: flex;
-    flex-direction: column;
+   padding: 2px;
+   margin: 2px;
+   width: 15vw;
+   display: flex;
+   flex-direction: column;
 }
 
 .trip_item {
-    border-bottom: 1px dotted black;
+   border-bottom: 1px solid lightgray;
 }
 
 .trip_btn {
-    margin: 2px;
-    background-color: aqua;
-    border-radius: 25px;
-    font-weight: bold;
+   font-family: "Quicksand", sans-serif;
+   margin: 5px;
+   background-color: coral;
+   border-radius: 25px;
+   font-weight: bold;
+   border: none;
+   transition: box-shadow ease 0.5s;
+}
+
+.trip_btn:hover {
+   cursor: pointer;
+   box-shadow: 0px 0px 4px 2px #ff7f7f;
 }
 
 table {
-    width: 100%;
+   width: 100%;
 }
 
 td.location {
-    width: 35%;
-    text-align: left;
+   width: 35%;
+   text-align: left;
 }
 
 td.dates {
-    width: 30%;
-    text-align: left;
+   width: 30%;
+   text-align: left;
 }
 
-/* td.notes {
+.deleteTripBtn {
+   background: none;
+   border: none;
+   color: coral;
+   font-size: 18px;
+   transition: color ease 0.2s;
+}
 
-} */
+.deleteTripBtn:hover {
+   cursor: pointer;
+   color: rgb(248, 0, 0);
+}
+
+.deletePlaceBtn {
+   background: none;
+   border: none;
+   font-size: 18px;
+   transition: color ease 0.2s;
+}
+
+.deletePlaceBtn:hover {
+   cursor: pointer;
+   color: red;
+   font-weight: bold;
+}

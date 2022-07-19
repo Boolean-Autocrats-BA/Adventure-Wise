@@ -35,6 +35,7 @@ const TripDetailsOverview = ({ dates }) => {
                <th>{places.length} Places</th>
                <th>
                   <button
+                     className="deleteTripBtn"
                      id={selectedTripId}
                      onClick={(e) => {
                         deleteTrip(e.target.id);
