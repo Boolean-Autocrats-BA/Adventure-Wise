@@ -5,7 +5,6 @@ export default function SignupForm({ setLogin }) {
    const { register, handleSubmit } = useForm();
 
    const onSubmit = (data) => {
-      console.log(data);
       fetch("http://localhost:3050/users", {
          method: "POST",
          headers: {
@@ -15,7 +14,6 @@ export default function SignupForm({ setLogin }) {
       })
          .then((res) => res.json())
          .then((response) => {
-            console.log(response);
             if (response === "OK") {
                setLogin(true);
             }

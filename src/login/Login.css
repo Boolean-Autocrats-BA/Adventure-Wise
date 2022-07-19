@@ -45,8 +45,7 @@
 }
 
 .loginForm,
-.registerForm,
-.addTripForm {
+.registerForm {
    font-family: "Major Mono Display", monospace;
    display: flex;
    flex-direction: column;
@@ -104,19 +103,5 @@
 #switch2Login:hover {
    color: rgb(0, 175, 161);
    cursor: pointer;
-   font-weight: bold;
-}
-
-#modalCloseBtn {
-   background: none;
-   font-size: 22px;
-   border: none;
-   font-size: 18px;
-   transition: color ease 0.2s;
-}
-
-#modalCloseBtn:hover {
-   cursor: pointer;
-   color: red;
    font-weight: bold;
 }

@@ -120,14 +120,3 @@ td.dates {
    color: red;
    font-weight: bold;
 }
-
-#addTripBtn {
-   background: none;
-   border: none;
-   font-size: 20px;
-}
-
-#addTripBtn:hover {
-   cursor: pointer;
-   color: rgb(0, 132, 255);
-}
