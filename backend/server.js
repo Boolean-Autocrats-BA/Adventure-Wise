@@ -46,14 +46,14 @@ app.post("/users", async (req, res) => {
    try {
       const checkIfExists = await pool.query("SELECT email FROM users WHERE email = $1", [email]);
       if (checkIfExists.rows.length != 0) {
-         res.json("User already exists");
+         return res.json("User already exists");
       } else {
          const hashedPassword = await bcrypt.hash(password, 10);
          const newUser = await pool.query(
             "INSERT INTO users (first_name, last_name, email, password) VALUES ($1, $2, $3, $4) ON CONFLICT DO NOTHING RETURNING *",
             [first_name, last_name, email, hashedPassword]
          );
-         res.json("OK");
+         return res.json("OK");
       }
    } catch {
       res.status(500).json("Uh oh... Something went wrong");
@@ -66,14 +66,14 @@ app.post("/users/login", async (req, res) => {
 
    const user = await pool.query("SELECT user_id, email, password FROM users WHERE email = $1", [email]);
    if (user.rows[0] === undefined) {
-      res.status(400).json("User Not Found");
+      return res.json("User Not Found");
    }
 
    try {
       if (await bcrypt.compare(password, user.rows[0].password)) {
          res.json(user.rows[0].user_id);
       } else {
-         res.json("Wrong Password");
+         return res.json("Wrong Password");
       }
    } catch {
       res.status(500).json("Uh oh... Something went wrong");
@@ -81,18 +81,18 @@ app.post("/users/login", async (req, res) => {
 });
 
 // FOR USER TO UPDATE THEIR INFO
-app.patch("/users/profile", async (req, res) => {
-   const { user_id, email, address, city, state, zipcode } = req.body;
-   try {
-      const newInfo = await pool.query(
-         "UPDATE users SET email = COALESCE($1, email), address = COALESCE($2, address), city = COALESCE($3, city), state = COALESCE($4, state), zipcode = COALESCE($5, zipcode) WHERE user_id = $6 RETURNING *",
-         [email, address, city, state, zipcode, user_id]
-      );
-      res.status(200).json("Update Successful");
-   } catch {
-      res.status(500).json("Uh oh... Something went wrong");
-   }
-});
+// app.patch("/users/profile", async (req, res) => {
+//    const { user_id, email, address, city, state, zipcode } = req.body;
+//    try {
+//       const newInfo = await pool.query(
+//          "UPDATE users SET email = COALESCE($1, email), address = COALESCE($2, address), city = COALESCE($3, city), state = COALESCE($4, state), zipcode = COALESCE($5, zipcode) WHERE user_id = $6 RETURNING *",
+//          [email, address, city, state, zipcode, user_id]
+//       );
+//       res.status(200).json("Update Successful");
+//    } catch {
+//       res.status(500).json("Uh oh... Something went wrong");
+//    }
+// });
 
 // THIS SETS THE GLOBAL VARIABLE TO BE THE USERID
 app.get("/users/:id", async (req, res) => {
