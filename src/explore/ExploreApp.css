@@ -1,345 +1,351 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
 .Explore-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 40px;
-    font-family: "Major Mono Display";
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   font-size: 40px;
+   font-family: "Quicksand", sans-serif;
+   align-items: center;
 }
 
-.Place-SearchForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
+.Place-SearchForm {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 40px;
 }
 
-#Place-SearchBar{
-    width: 60%;
-    background-color:#ffffff;
-    height: 28px;
+#Place-SearchBar {
+   width: 60%;
+   background-color: #ffffff;
+   height: 28px;
    margin-top: 20px;
-    opacity: 90%;
-    border: 10;
+   opacity: 90%;
+   border: 10;
 }
 
 ::placeholder {
-/* color: white; */
-opacity: 1;
+   /* color: white; */
+   opacity: 1;
 }
 
-#Place-SearchButton{
-    height: 28px;
-    background-color: #000000;
-    color: white;
-    border: 0;
-    width: 100px;
+#Place-SearchButton {
+   height: 28px;
+   background-color: #000000;
+   color: white;
+   border: 0;
+   width: 100px;
 }
 
 .Result-Card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:flex-start;
-    border: solid black;
-    background-color: #778899b3;
-    margin-bottom: 10px;
-    width: 500px;
-    cursor: pointer;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   border: solid black;
+   background-color: #778899b3;
+   margin-bottom: 10px;
+   width: 500px;
+   cursor: pointer;
 }
 
 .Result-CardImg {
-border-style: solid;
-border-color: #ffffff;
-    width: 70px;
-    height: 50px;
-    cursor: pointer;
-    margin-right: 10px;
+   border-style: solid;
+   border-color: #ffffff;
+   width: 70px;
+   height: 50px;
+   cursor: pointer;
+   margin-right: 10px;
 }
 
-
-.Trips-SideBarInd{
-   
-    margin-bottom: 5px;
-    height: fit-content;
-    display: flex;
-    cursor: pointer;
-    justify-content: space-between;
-
+.Trips-SideBarInd {
+   margin-bottom: 5px;
+   height: fit-content;
+   display: flex;
+   cursor: pointer;
+   justify-content: space-between;
 }
 
 .Trip-SideBarCardContent {
-    background-color: white;
+   background-color: white;
 }
 
-.Selected-SearchContainer{
-display: flex;
-flex-direction: column;
-align-items: center;
-font-family: sans-serif;
+.Selected-SearchContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: "Quicksand", sans-serif;
 }
 
 details > summary {
-    list-style: none;
-    padding: 1rem;
-    border: solid rgba(0, 0, 0, 0.812);
-    background-color: #00b499e0;
-    color:#FFFFFF;
-    text-shadow:  0 0 2px rgb(0, 0, 0);
-    font-size: large;
+   list-style: none;
+   padding: 1rem;
+   border: solid rgba(0, 0, 0, 0.812);
+   background-color: #00b499e0;
+   color: #ffffff;
+   text-shadow: 0 0 2px rgb(0, 0, 0);
+   font-size: large;
 }
 
 .add-ListButton {
-  background: #00b499;
-  border: 1px solid #00b499;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  margin-top: 10px;
+   background: #00b499;
+   border: 1px solid #00b499;
+   border-radius: 6px;
+   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+   box-sizing: border-box;
+   color: #ffffff;
+   cursor: pointer;
+   display: inline-block;
+   /* font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif; */
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 16px;
+   min-height: 40px;
+   outline: 0;
+   padding: 12px 14px;
+   text-align: center;
+   text-rendering: geometricprecision;
+   text-transform: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+   margin-top: 10px;
 }
 
 .add-ListButton:hover,
 .add-ListButton:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #00b499;
+   background-color: initial;
+   background-position: 0 0;
+   color: #00b499;
 }
 
 .add-ListButton:active {
-  opacity: .5;
+   opacity: 0.5;
 }
 
-#notes-Input{
-    min-width: 400px;
-    min-height: 200px;
-    max-width: 400px;
-    max-height: 300px;
+#notes-Input {
+   min-width: 400px;
+   min-height: 200px;
+   max-width: 400px;
+   max-height: 300px;
 }
 
 /* The sidepanel menu */
 .Search-Sidepanel {
-    height: 250px; /* Specify a height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position:absolute; /* Stay in place */
-    color: rgb(0, 0, 0);
-    font-size: small;
-    font-family: sans-serif;
-    /* top: -50%; */
-    left: 2%;
-    top: 27%;
-    background-color: rgba(29, 29, 29, 0.945); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-  }
-  
-  /* The sidepanel links */
-  .Search-Sidepanel a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .Search-Sidepanel a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .Search-Sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Style the button that is used to open the sidepanel */
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    position:absolute;
-    top: 28%;
-    left: 2%;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
-
-  .Result-CardTitle {
-color:#FFFFFF;
-text-shadow:  0 0 2px rgb(0, 0, 0);
-  }
-
-  .Trip-Sidepanel {
-    height: 250px; /* Specify a height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position:absolute; /* Stay in place */
-    color: rgb(0, 0, 0);
-    font-size: small;
-    font-family: sans-serif;
-    /* top: -50%; */
-    left: 82%;
-    top: 27%;
-    background-color: rgba(29, 29, 29, 0.945); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-  }
-  
-  /* The sidepanel links */
-  .Trip-Sidepanel a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .Trip-Sidepanel a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .Trip-Sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Style the button that is used to open the sidepanel */
-  .openTripbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    position:absolute;
-    top: 28%;
-    left: 82%;
-  }
-  
-  .openTripbtn:hover {
-    background-color: #444;
-  }
-
-  .closeTripbtn{
-    position: inherit;
-top: 1%;
-right: 10%;
-  }
-
-#start-DT{
-height: 20px;
-width: 200px;
-font-family:sans-serif;
-font-weight: 540;
-border: solid #00b499;
-font-weight: 550;
-font-size: medium;
+   height: 250px; /* Specify a height */
+   width: 0; /* 0 width - change this with JavaScript */
+   position: absolute; /* Stay in place */
+   color: rgb(0, 0, 0);
+   font-size: small;
+   /* font-family: sans-serif; */
+   /* top: -50%; */
+   left: 2%;
+   top: 27%;
+   background-color: rgba(29, 29, 29, 0.945); /* Black*/
+   overflow-x: hidden; /* Disable horizontal scroll */
+   padding-top: 60px; /* Place content 60px from the top */
+   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 }
 
-#end-DT{
-    height: 20px;
-    font-family:sans-serif;
-    width: 200px;
-    border: solid #ff0000;
-    border-radius: 4%;
-    font-weight: 550;
-    font-size: medium;
+/* The sidepanel links */
+.Search-Sidepanel a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
 }
 
-.Selected-SearchTitle{
-    font-family: sans-serif;
-    font-size: 45px;
-
+/* When you mouse over the navigation links, change their color */
+.Search-Sidepanel a:hover {
+   color: #f1f1f1;
 }
 
-.Search-BarButton{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
-background: #0095e5;
-  border: 1px solid #0095e5;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 35px;
-  max-height: 35px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  margin-top: 15px;
+/* Position and style the close button (top right corner) */
+.Search-Sidepanel .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+   font-size: 20px;
+   cursor: pointer;
+   background-color: #111;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   position: absolute;
+   top: 28%;
+   left: 2%;
+}
+
+.openbtn:hover {
+   background-color: #444;
+}
+
+.Result-CardTitle {
+   color: #ffffff;
+   text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.Trip-Sidepanel {
+   height: 250px; /* Specify a height */
+   width: 0; /* 0 width - change this with JavaScript */
+   position: absolute; /* Stay in place */
+   color: rgb(0, 0, 0);
+   font-size: small;
+   font-family: "Quicksand", sans-serif;
+   /* top: -50%; */
+   left: 82%;
+   top: 27%;
+   background-color: rgba(29, 29, 29, 0.945); /* Black*/
+   overflow-x: hidden; /* Disable horizontal scroll */
+   padding-top: 60px; /* Place content 60px from the top */
+   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.Trip-Sidepanel a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+}
+
+.Trip-Sidepanel a:hover {
+   color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.Trip-Sidepanel .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openTripbtn {
+   font-size: 20px;
+   cursor: pointer;
+   background-color: #111;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   position: absolute;
+   top: 28%;
+   left: 82%;
+}
+
+.openTripbtn:hover {
+   background-color: #444;
+}
+
+.closeTripbtn {
+   position: inherit;
+   top: 1%;
+   right: 10%;
+}
+
+#start-DT {
+   height: 20px;
+   width: 200px;
+   /* font-family: sans-serif; */
+   font-weight: 540;
+   border: solid #00b499;
+   font-weight: 550;
+   font-size: medium;
+}
+
+#end-DT {
+   height: 20px;
+   /* font-family: sans-serif; */
+   width: 200px;
+   border: solid #ff0000;
+   border-radius: 4%;
+   font-weight: 550;
+   font-size: medium;
+}
+
+.Selected-SearchTitle {
+   /* font-family: sans-serif; */
+   font-size: 45px;
+}
+
+.Search-BarButton {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: 10px;
+   background: #0095e5;
+   border: 1px solid #0095e5;
+   border-radius: 6px;
+   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+   box-sizing: border-box;
+   color: #ffffff;
+   cursor: pointer;
+   display: inline-block;
+   /* font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif; */
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 16px;
+   min-height: 35px;
+   max-height: 35px;
+   outline: 0;
+   padding: 12px 14px;
+   text-align: center;
+   text-rendering: geometricprecision;
+   text-transform: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+   margin-top: 15px;
 }
 
 .Search-BarButton:hover,
 .Search-BarButton:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #0095e5;
+   background-color: initial;
+   background-position: 0 0;
+   color: #0095e5;
 }
 
 .Search-BarButton:active {
-  opacity: .5;
+   opacity: 0.5;
 }
 
-.Search-BarContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
+.Search-BarContainer {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
 }
 
-.Selected-SearchImage{
-    margin-top: 40px;
-    height: 500px;
-    width: 750px;
-    border-radius: 8%;
+.Selected-SearchImage {
+   margin-top: 40px;
+   height: 500px;
+   width: 750px;
+   border-radius: 8%;
+}
+
+.Trip-Sidepanel select {
+   font-family: "Quicksand", sans-serif;
+   width: 75%;
+}
+
+.tripPlacesContainer {
+   color: white;
+   background-color: lightcoral;
+   margin: 5px;
 }
