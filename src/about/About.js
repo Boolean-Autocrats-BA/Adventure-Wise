@@ -7,10 +7,29 @@ function About() {
       <div className="aboutContainer">
          <div className="aboutThisApp">
             <h3>About This App</h3>
-            <p>ADD SOMETHING ABOUT THIS APP</p>
+            <p id="aboutParagraph">
+               This application was built for you to plan your next adventure using a modular UI and an auto-complete
+               enabled search fetching from Google Maps API. We implemented an AGILE environment to guide us from
+               wireframe to deployment. The front end is running on ReactJS using various npm packages to aid us in
+               creating a seamless experience. The backend is running on Express, NodeJS and PostgreSQL. The PostgreSQL
+               database has been migrated using AWS for a central working database for us to build and test our
+               application without the need of creating the database locally.
+            </p>
+            <div className="about-repoDiv">
+               <a
+                  id="repoBtn"
+                  href="https://github.com/Boolean-Autocrats-BA/Adventure-Wise"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  <FaGithub />
+                  Repo
+               </a>
+            </div>
          </div>
-         <h3>Collaborators</h3>
+         <br />
          <div className="about-Collaborators">
+            <h3 id="collabTitle">Collaborators</h3>
             <div className="collabCard">
                <div>Anthony Clay</div>
                <div className="social-links">
