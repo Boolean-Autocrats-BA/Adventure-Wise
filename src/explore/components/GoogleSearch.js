@@ -20,6 +20,7 @@ export default function GoogleSearch(isLoaded) {
       setValue(e.target.value);
    };
 
+
    const onSubmit = () => {
       setplaceDetails(null)
       setSearchRes(null)
@@ -36,6 +37,8 @@ export default function GoogleSearch(isLoaded) {
          renderPlaceResults();
       }
       
+      document.getElementById("Search-Sidepanel").style.width = "300px";
+      document.getElementById("Search-Sidepanel").style.height = "450px";
       
    };
 
