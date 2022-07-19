@@ -7,6 +7,7 @@ function About() {
       <div className="aboutContainer">
          <div className="aboutThisApp">
             <h3>About This App</h3>
+            <p>ADD SOMETHING ABOUT THIS APP</p>
          </div>
          <h3>Collaborators</h3>
          <div className="about-Collaborators">
