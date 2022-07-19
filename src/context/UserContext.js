@@ -26,6 +26,7 @@ export const UserProvider = ({ children }) => {
             setUserProfile,
             userTrips,
             setUserTrips,
+            isLoaded,
             searchRes,
             setSearchRes,
          }}
